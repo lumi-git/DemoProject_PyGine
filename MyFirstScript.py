@@ -14,8 +14,8 @@ class MyFirstScript(Component) :
         self.parent.transform.position.y += 1 * dt * PyGine.KeyListener.getPressed(pygame.K_s)
         self.parent.transform.position.y -= 1 * dt * PyGine.KeyListener.getPressed(pygame.K_z)
         self.parent.transform.scale.x += 0.1 * dt * PyGine.KeyListener.getPressed(pygame.K_e)
-        if(self.parent.transform.scale.x > 0-0.1):
-            self.parent.transform.scale.x -= 0.1 * dt * PyGine.KeyListener.getPressed(pygame.K_r)
 
-
+        self.parent.transform.scale.x -= 0.1 * dt * PyGine.KeyListener.getPressed(pygame.K_r)
+        if (self.parent.transform.scale.x < 0):
+            self.parent.transform.scale.x = 0
 

@@ -1,4 +1,4 @@
-from PyGine import GameObject
+from PyGine import GameObject, SpriteComponent, BoxColliderComponent
 from PyGine import DrawRectComponent
 from PyGine import Vector3
 from MySecondScript import MySecondScript

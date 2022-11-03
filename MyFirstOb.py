@@ -1,4 +1,4 @@
-from PyGine import GameObject
+from PyGine import GameObject, BoxColliderComponent
 from PyGine import SpriteComponent
 from PyGine import Vector3
 from PyGine.Debug import PrintDebug
@@ -17,7 +17,7 @@ class MyFirstOb(GameObject) :
 
         # attach a drawCircle component, from the standard lib of PyGine, to this gameobject
         self.addComponent(SpriteComponent(self,"FirstSprite.png"))
-
+        self.addComponent(BoxColliderComponent(self))
         # attach a custom component, called a script, to this gameobject
         self.addComponent(MyFirstScript(self))
 
