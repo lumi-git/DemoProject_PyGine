@@ -8,5 +8,9 @@ class MyFirstScript(Component) :
         PrintDebug("my first script is starting !")
 
     def update(self,dt):
-        self.parent.transform.position.x +=1*dt*PyGine.KeyListener.getPressed(pygame.K_SPACE)
-        self.parent.transform.position.x -= 1 * dt * PyGine.KeyListener.getPressed(pygame.K_LSHIFT)
+
+        self.parent.transform.position.x +=1*dt*PyGine.KeyListener.getPressed(pygame.K_d)
+        self.parent.transform.position.x -= 1 * dt * PyGine.KeyListener.getPressed(pygame.K_q)
+        self.parent.transform.position.y += 1 * dt * PyGine.KeyListener.getPressed(pygame.K_s)
+        self.parent.transform.position.y -= 1 * dt * PyGine.KeyListener.getPressed(pygame.K_z)
+

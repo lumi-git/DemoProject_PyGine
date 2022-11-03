@@ -6,7 +6,8 @@ from PyGine.Debug import PrintDebug
 from PyGine import *
 
 class MySecondScript(Component) :
+    def __init__(self,parent):
+        super().__init__(parent)
 
-    def earlyStart(self):
-        PrintDebug("my second script is starting !")
-        self.parent.transform.position = Vector3(random.randint(100,200),random.randint(100,200),0)
+    def start(self):
+        self.parent.transform.position = Vector3(random.randint(0,1000),random.randint(0,600),0)
